@@ -1,0 +1,32 @@
+body.light-mode {
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+.light-mode .navbar{
+    background-color: var(--bg-light);
+    border-color: rgb(31 38 135 / 20%);
+    box-shadow: none;
+}
+.light-mode .mobile-nav-toggle .bar{
+    background-color: var(--text-dark);
+}
+
+.light-mode .nav_menu li a {
+    color: var(--text-dark);
+}
+
+.light-mode .nav_menu li a:hover {
+    color: #686de0;
+}
+
+.light-mode .mobile-nav-toggle .bar{
+    background-color: var(--second);
+}
+
+@media (max-width: 768px) {
+    .light-mode .wrapp_nav_menu {
+        background-color: var(--bg-light);
+        border-left: 1px solid rgb(31 38 135 / 20%);
+        box-shadow: 0px 0px 0px 0px #080321;       
+    }
+}

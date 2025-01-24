@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Effect on Image</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .image-container {
+            perspective: 1000px;
+        }
+
+        .image-container .item {
+            width: 300px;
+            height: auto;
+            transition: all 0.1s ease-in-out;
+            transform-origin: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="image-container">
+        <img src="https://png.pngtree.com/png-clipart/20230525/original/pngtree-world-environment-day-5th-june-green-earth-covered-with-trees-png-image_9170049.png"
+            alt="Earth Image" class="item">
+    </div>
+    <div class="image-container">
+        <div class="item" class="img" style="padding: 15px; border: 1px solid rebeccapurple;">
+            <h1>Lorem ipsum dolor sit amet.</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sint optio fugiat nulla voluptatem velit
+                temporibus veniam reprehenderit necessitatibus quos.</p>
+        </div>
+    </div>
+    <script>
+        const image = document.querySelectorAll('.item')
+
+        image.forEach((i) => {
+            i.addEventListener('mousemove', (e) => {
+                const rect = i.getBoundingClientRect();
+                const x = e.clientX - rect.left; // X-coordinate within the image
+                const y = e.clientY - rect.top;  // Y-coordinate within the image
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = ((y - centerY) / centerY) * 15; // Tilt effect
+                const rotateY = ((x - centerX) / centerX) * -15;
+
+                i.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            })
+            i.addEventListener('mouseleave', (e) => {
+                
+                i.style.transform = 'rotateX(0deg) rotateY(0deg)';
+            });
+        })
+       
+    </script>
+</body>
+
+</html>

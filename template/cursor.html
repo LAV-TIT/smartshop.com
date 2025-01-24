@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *::before,
+    ::after {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        background: linear-gradient(#000, #00000087), url('bg.jpg') no-repeat center/cover;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .card {
+        max-width: 400px;
+        height: 250px;
+        aspect-ratio: 16/9;
+        border-radius: 10px;
+        background-color: #ffffff7a;
+        border: 1px solid gainsboro;
+        position: relative;
+        color: #010101;
+        line-height: 25px;
+        font-size: 20px;
+        padding: 20px;
+        opacity: 1;
+        transform: scale(1);
+        transition: all 0.9s ease;
+
+        @starting-style {
+            opacity: 0;
+            transform: scale(0.5);
+        }
+    }
+
+    .card>span {
+        display: block;
+        position: absolute;
+        width: auto;
+        aspect-ratio: 9/9;
+        border-radius: 50px;
+        box-shadow: 0px 0px 90px 50px #ff76e6;
+        z-index: -1;
+        transition: opacity 0.3s ease;
+        opacity: 1;
+        visibility: hidden;
+    }
+
+    .bg_text_anim {
+        margin: 0;
+        padding: 35px 0;
+        font-size: 85px;
+        font-weight: bold;
+        background: url('text.jpg') no-repeat center;
+        background-size: cover;
+        background-position: 0% 50%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: id 10s infinite;
+
+    }
+
+    @keyframes id {
+        0% {
+            background-position: 0% 100%;
+        }
+
+        50% {
+            background-position: 0% 50%;
+        }
+
+        100% {
+            background-position: 0% 0%;
+        }
+    }
+
+    /* .test {
+        background: rgba(0, 226, 255, 1);
+        box-shadow: 0 0 20px rgba(0, 226, 255, 1), 0 0 40px rgba(0, 226, 255, 1), 0 0 60px rgba(0, 226, 255, 1), 0 0 80px rgba(0, 226, 255, 1), 0 0 0 8px rgba(0, 226, 255, .1);
+    } */
+</style>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="bg_text_anim">Heading</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat hic distinctio libero totam fuga
+                cumque
+                nesciunt alias iusto! Perspiciatis quas libero, ipsam obcaecati enim ipsa corporis fuga numquam
+                laudantium
+                facere.
+            </p>
+            <span></span>
+        </div>
+    </div>
+
+    <script>
+        const card = document.querySelector('.card');
+        const cursor = document.querySelector('span');
+        card.addEventListener("mousemove", (event) => {
+            cursor.style.opacity = "1";
+            cursor.style.visibility = "visible";
+            const x = event.layerX;;
+            const y = event.layerY;
+            cursor.style.left = `${x}px`;
+            cursor.style.top = `${y}px`;
+            console.log(event)
+            console.log("x=" + x, "y=" + y)
+        })
+        card.addEventListener('mouseleave', (event) => {
+            cursor.style.opacity = "0";
+            cursor.style.visibility = "hidden";
+        })
+    </script>
+
+</body>
+
+</html>

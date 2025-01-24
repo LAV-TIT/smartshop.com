@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart shop</title>
+    <link rel="shortcut icon" href="./assets/images/favicon1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/aos-master/dist/aos.css">
+</head>
+
+<body>
+    <header class="header_scroll">
+        <nav>
+            <div class="logo d_min_lg_none">
+                <a title="Smart shop" href="">
+                    <img src="./assets/images/logo.svg" alt="logo" width="80" height="60">
+                </a>
+            </div>
+            <div class="wrapp_main_menu">
+                <div class="bg bdb px_max_lg_3 d_block_max_lg d_none">
+                    <div class="logo_and_btn_close">
+                        <a href="">
+                            <img src="./assets/images/logo.svg" alt="logo" width="80" height="60">
+                        </a>
+                        <button class="close_menu_toggle"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div>
+                <div class="wrapp_form_search">
+                    <div class="con_search">
+                        <p class="d_max_lg_none call_phone">
+                            <a title="Contact Us" href="tel:0889820067"><i
+                                    class="fa-solid fa-phone-volume fa-shake"></i> 0889820067</a>
+                        </p>
+
+                        <form class="form_search">
+                            <input class="input" placeholder="Type your text" required="" type="text">
+                            <button class="reset" type="reset">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button>
+                                <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                                    aria-labelledby="search">
+                                    <path
+                                        d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                        stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="main_menu bg_max_lg">
+                    <div class="logo d_max_lg_none">
+                        <a title="Smart shop" href="./index.html">
+                            <img src="./assets/images/logo.svg" alt="logo" width="80" height="60">
+                        </a>
+                    </div>
+                    <ul class="navigator mt_max_lg_2">
+
+                        <li class="nav_item">
+                            <a class="item_link" href="./index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="item_link" href="./about.html">About us</a>
+                        </li>
+                        <li class="nav_item li_has_sub hasactive">
+                            <a class="item_link has_sub hasactive" href="#">
+                                Products
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul>
+                                <li class="nav_item hasactive">
+                                    <a class="item_link hasactive" href="./smart-watch.html">Smart Watch</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a class="item_link" href="./digital-watch.html">Digital Watch</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a class="item_link" href="./analog-watch.html">
+                                        Analog Watch
+                                    </a>
+                                </li>
+                                <li class="nav_item">
+                                    <a class="item_link" href="./tactile-watches.html">Tactile Watch </a>
+                                </li>
+                                <li class="nav_item">
+                                    <a class="item_link" href="./all-models.html">All Models</a>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li class="nav_item">
+                            <a class="item_link" href="./service.html">Service</a>
+                        </li>
+                        <li class="nav_item li_has_sub">
+                            <a class="item_link has_sub" href="#">
+                                Blog
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul>
+                                <li class="nav_item">
+                                    <a class="item_link" href="./WatchCareTips.html">Watch Care Tips</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a class="item_link" href="#">How to Choose the Perfect Watch</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a class="item_link" href="#">Latest Trends in Watches</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <a class="item_link" href="./contact-us.html">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <div class="cart">
+                        <button type="button" id="cartamount" class="btn_cart cart_counter" number="0">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <h5 class="follow_us d_block_max_lg d_none">Follow Us</h5>
+                        <ul class="header_social_media">
+                            <li>
+                                <a title="Twitter" href="#"><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a title="Telegram" href=""><i class="fa-brands fa-telegram"></i></a>
+                            </li>
+                            <li>
+                                <a title="Facebook" href=""><i class="fa-brands fa-facebook"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button class="btn_toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        <div class="modals_sidebar_cart" id="modals_sidebar_cart">
+            <div class="modals_sidebar_cart_header bg">
+                <h5 class="cart_header_title mb-0">Your Cart</h5>
+                <button type="button" class="btn_close_cart">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+            <div class="modals_sidebar_cart_body">
+                <h4 id="label"></h4>
+                <div class="hoppingcart" id="hoppingcart">
+                </div>
+            </div>
+            <div class="modals_sidebar_cart_footer bg">
+                <div class="wrapp_footer">
+                    <div class="total_amount ">
+                        <h3 class="total_bill fonts-r">Total Bill</h3>
+                        <span id="total-price" class="total-price"></span>
+                    </div>
+                    <div>
+                        <button type="button" class="btn_checkout fonts-r">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="swiper banner_slider">
+            <div class="swiper-wrapper">
+                <div data-hash="slide1" class="swiper-slide" style="background:linear-gradient(90deg, rgba(58, 23, 142, 0.75), rgb(66 211 146 / 90%)), 
+                    url(./assets/images/slide1.jpg) right center / cover no-repeat; 
+                    height: 70vh; width: 100%;">
+                    <div class="banner_content">
+                        <h1 class="h1" data-aos="fade-down-right" data-aos-delay="50" data-aos-duration="1000"
+                            data-aos-easing="ease-in-out">
+                            Smartwatches: Your Ultimate<br>
+                            Companion for Connectivity and Style
+                        </h1>
+                        <div class="read_text">
+                            <p>
+                                "Stay connected and in control with our Smartwatches <br>
+                                – blending modern technology with sleek design for <br>
+                                your active lifestyle."
+                            </p>
+                            <a href="./smart-watch.html" class="btn_see_more">See More
+                                <i class="icon fa-solid fa-arrow-right-long"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="slide-fwd-bl">
+                        <img src="./assets/images/slide1.png" alt="" data-aos="fade-left">
+                    </div>
+                </div>
+                <div data-hash="slide2" class="swiper-slide" style="
+                background: linear-gradient(rgb(115, 87, 178,0.9), rgb(0, 0, 0,0.9)), 
+                url(./assets/images/slide1.jpg) right center / cover no-repeat;height: 70vh; width: 100%;">
+                    <div class="banner_content">
+                        <h1 class="h1" data-aos="fade-down-right" data-aos-delay="50" data-aos-duration="1000"
+                            data-aos-easing="ease-in-out">
+                            "Digital Watches: Modern <br>Precision at Your Fingertips"
+                        </h1>
+                        <div class="read_text">
+
+                            <p>
+                                Embrace precision and modernity with our Digital Watches<br>
+                                – designed for functionality and everyday style.
+                            </p>
+                            <a href="./digital-watch.html" class="btn_see_more">See More <i
+                                    class="icon fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                    <div class="slide-fwd-bl" data-aos="fade-left">
+                        <img src="./assets/images/slide2.png" alt="" data-aos="fade-left">
+                    </div>
+                </div>
+                <div data-hash="slide3" class="swiper-slide" style="background:linear-gradient(90deg, rgba(114, 87, 178, 0.9), rgba(46, 59, 176, 0.90)), 
+                    url(./assets/images/slide1.jpg)no-repeat right / cover; 
+                    height: 70vh; width: 100%;">
+                    <div class="banner_content">
+                        <h1 class="h1" data-aos="fade-down-right" data-aos-delay="50" data-aos-duration="1000"
+                            data-aos-easing="ease-in-out">
+                            Classic Analog Watches: <br>
+                            Where Tradition Meets Style
+                        </h1>
+                        <div class="read_text">
+                            <p>
+                                "Experience timeless elegance with our Analog Watches <br>
+                                – classic designs crafted for
+                                sophistication and style.<br>
+                                Perfect for every occasion."
+                            </p>
+                            <a href="./analog-watch.html" class="btn_see_more">See More <i
+                                    class="icon fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                    <div class="slide-fwd-bl" data-aos="fade-left">
+                        <img src="./assets/images/slide3.png" alt="" data-aos="fade-left">
+                    </div>
+                </div>
+                <div data-hash="slide4" class="swiper-slide" style="background:linear-gradient(90deg, rgba(58, 23, 142, 0.75), rgb(30 1 33 / 90%)), 
+                    url(./assets/images/slide4.jpg) right center / cover no-repeat; 
+                    height: 70vh; width: 100%;">
+                    <div class="banner_content">
+                        <h1 class="h1" data-aos="fade-down-right" data-aos-delay="50" data-aos-duration="1000"
+                            data-aos-easing="ease-in-out">
+                            "Tactile Watches: Empowering <br> Timekeeping with Every Touch"
+                        </h1>
+                        <div class="read_text">
+                            <p>
+                                "Redefining accessibility with our Tactile Watches <br>
+                                – innovative designs that combine style and functionality for all."
+                            </p>
+                            <a href="./tactile-watches.html" class="btn_see_more">See More <i
+                                    class="icon fa-solid fa-arrow-right-long"></i></a>
+                        </div>
+                    </div>
+                    <div class="slide-fwd-bl" data-aos="fade-left">
+                        <img src="./assets/images/slide4.png" alt="" data-aos="fade-left">
+                    </div>
+                </div>
+            </div>
+            <div class="btn_banner swiper-button-next"></div>
+            <div class="btn_banner swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+    <div class="bg_welcome_text_home">
+        <div class="container">
+            <div class="row mt-5 pt-5">
+                <div class="welcome_text_home">
+                    <h1>
+                        Innovation at Your Fingertips"
+                    </h1>
+                    <p>
+                        <strong><span style="color: #7357b2;">Smart Watch</span></strong>
+                        "Redefine your timekeeping experience with our cutting-edge Smartwatches. Designed for modern
+                        lifestyles, these versatile devices combine style and technology to keep you connected, active,
+                        and in control. With features like fitness tracking, message notifications, customizable
+                        displays, and long-lasting battery life, our Smartwatches are perfect for work, play, and
+                        everything in between. Explore our collection and find the perfect smartwatch that complements
+                        your everyday life."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="section_smart_watch section_slide">
+        <div class="container">
+            <div class="row" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000"
+                data-aos-easing="ease-in-out">
+                <div class="wrapp_smart_watch wrapp_slide" style=" position: relative;">
+                    <div class="border-b">
+                        <h2 class="fonts-r">Apple Watch</h2>
+                        <div class="btn_smart_watchs btn_slides">
+                            <div class="btn_smart_watch btn_slide swiper-button-prev"></div>
+                            <div class="btn_smart_watch btn_slide swiper-button-next"></div>
+                        </div>
+                    </div>
+                    <div id="smart_watch" class="swiper smart_watch get_id_slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" id="" class="" data-aos="fade-up" data-aos-delay="50"
+                                data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <div rotbin="New" class="box_item">
+                                    <div class="img" style="margin: 10px auto 10px;width: 220px;">
+                                        <img src="./assets/images/applewatch/apple-watch-series-9-aluminum-midnight-midnight-sport-band-1-300x300.webp"
+                                            class="card-img-top" alt="Galaxy Watch6, BT">
+                                    </div>
+                                    <div class="box_body">
+                                        <a href="" style="text-decoration: none;">
+                                            <h5 class="title" style="font-weight: 400;">Apple Watch Series 9 Sport Band
+                                                45mm GPS</h5>
+                                        </a>
+                                        <p class="rate">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i><span> (3.2)</span>
+                                        </p>
+                                        <p class="text" style="color: #1a1a1a;">
+                                            Unlock your day's full potential with Samsung Galaxy Watch6...
+                                        </p>
+                                        <h4 class="price">$ 239</h4>
+                                        <div style="display: flex; justify-content: space-between;align-items: center;">
+                                            <div class="">
+                                                <span>Qty</span>
+                                                <button onclick="" class="btn text-danger bg-light">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button>
+                                                <span id="dsdass" class="px-1 quantity">1</span>
+                                                <button onclick="" class="btn text-success bg-light">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </div>
+                                            <div class="">
+                                                <button class="btn_heart">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </button>
+                                                <button onclick="" class="btn_add_to_cart  text-primary bg-light">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="" class="" data-aos="fade-up" data-aos-delay="50"
+                                data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <div rotbin="New" class="box_item">
+                                    <div class="img" style="margin: 10px auto 10px;width: 220px;">
+                                        <img src="./assets/images/applewatch/apple-watch-series-9-aluminum-pink-pink-sport-band-300x300.webp"
+                                            class="card-img-top" alt="Galaxy Watch6, BT">
+                                    </div>
+                                    <div class="box_body">
+                                        <a href="" style="text-decoration: none;">
+                                            <h5 class="title" style="font-weight: 400;">Apple Watch Series 9 Sport Band
+                                                41mm GPS</h5>
+                                        </a>
+                                        <p class="rate">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i><span> (3.2)</span>
+                                        </p>
+                                        <p class="text" style="color: #1a1a1a;">
+                                            Unlock your day's full potential with Samsung Galaxy Watch6...
+                                        </p>
+                                        <h4 class="price">$ 239</h4>
+                                        <div style="display: flex; justify-content: space-between;align-items: center;">
+                                            <div class="">
+                                                <span>Qty</span>
+                                                <button onclick="" class="btn text-danger bg-light">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button>
+                                                <span id="dsdass" class="px-1 quantity">1</span>
+                                                <button onclick="" class="btn text-success bg-light">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </div>
+                                            <div class="">
+                                                <button class="btn_heart">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </button>
+                                                <button onclick="" class="btn_add_to_cart  text-primary bg-light">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="" class="" data-aos="fade-up" data-aos-delay="50"
+                                data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <div rotbin="New" class="box_item">
+                                    <div class="img" style="margin: 10px auto 10px;width: 220px;">
+                                        <img src="./assets/images/applewatch/5C113B3B-1512-4810-A6E0-CE7EEC9E7069-300x300.png"
+                                            class="card-img-top" alt="Apple Watch Series Ultra (Pre-Order)">
+                                    </div>
+                                    <div class="box_body">
+                                        <a href="" style="text-decoration: none;">
+                                            <h5 class="title" style="font-weight: 400;">Apple Watch Series Ultra
+                                                (Pre-Order)</h5>
+                                        </a>
+                                        <p class="rate">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i><span> (3.2)</span>
+                                        </p>
+                                        <p class="text" style="color: #1a1a1a;">
+                                            Unlock your day's full potential with Samsung Galaxy Watch6...
+                                        </p>
+                                        <h4 class="price">$ 239</h4>
+                                        <div style="display: flex; justify-content: space-between;align-items: center;">
+                                            <div class="">
+                                                <span>Qty</span>
+                                                <button onclick="" class="btn text-danger bg-light">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button>
+                                                <span id="dsdass" class="px-1 quantity">0</span>
+                                                <button onclick="" class="btn text-success bg-light">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </div>
+                                            <div class="">
+                                                <button class="btn_heart">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </button>
+                                                <button onclick="" class="btn_add_to_cart  text-primary bg-light">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="product_dsdass" class="" data-aos="fade-up"
+                                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <div rotbin="New" class="box_item">
+                                    <div class="img" style="margin: 10px auto 10px;width: 220px;">
+                                        <img src="./assets/images/applewatch/A4B72F5E-0FEB-4140-AF9B-ED698EA71BE2-300x300.png"
+                                            class="card-img-top" alt="Galaxy Watch6, BT">
+                                    </div>
+                                    <div class="box_body">
+                                        <a href="" style="text-decoration: none;">
+                                            <h5 class="title" style="font-weight: 400;">Apple Watch Series 8 (Pre-order)
+                                            </h5>
+                                        </a>
+                                        <p class="rate">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i><span> (3.2)</span>
+                                        </p>
+                                        <p class="text" style="color: #1a1a1a;">
+                                            Unlock your day's full potential with Samsung Galaxy Watch6...
+                                        </p>
+                                        <h4 class="price">$ 239</h4>
+                                        <div style="display: flex; justify-content: space-between;align-items: center;">
+                                            <div class="">
+                                                <span>Qty</span>
+                                                <button onclick="" class="btn text-danger bg-light">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button>
+                                                <span id="dsdass" class="px-1 quantity">1</span>
+                                                <button onclick="" class="btn text-success bg-light">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </div>
+                                            <div class="">
+                                                <button class="btn_heart">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </button>
+                                                <button onclick="" class="btn_add_to_cart  text-primary bg-light">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="product_dsdass" class="" data-aos="fade-up"
+                                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <div rotbin="New" class="box_item">
+                                    <div class="img" style="margin: 10px auto 10px;width: 220px;">
+                                        <img src="./assets/images/applewatch/apple-watch-7-nike-starlight-300x300.jpg"
+                                            class="card-img-top" alt="Galaxy Watch6, BT">
+                                    </div>
+                                    <div class="box_body">
+                                        <a href="" style="text-decoration: none;">
+                                            <h5 class="title" style="font-weight: 400;">Apple Watch Series 7 Nike</h5>
+                                        </a>
+                                        <p class="rate">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i><span> (3.2)</span>
+                                        </p>
+                                        <p class="text" style="color: #1a1a1a;">
+                                            Unlock your day's full potential with Samsung Galaxy Watch6...
+                                        </p>
+                                        <h4 class="price">$ 239</h4>
+                                        <div style="display: flex; justify-content: space-between;align-items: center;">
+                                            <div class="">
+                                                <span>Qty</span>
+                                                <button onclick="" class="btn text-danger bg-light">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button>
+                                                <span id="dsdass" class="px-1 quantity">1</span>
+                                                <button onclick="" class="btn text-success bg-light">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </div>
+                                            <div class="">
+                                                <button class="btn_heart">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </button>
+                                                <button onclick="" class="btn_add_to_cart  text-primary bg-light">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="product_dsdass" class="" data-aos="fade-up"
+                                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <div rotbin="New" class="box_item">
+                                    <div class="img" style="margin: 10px auto 10px;width: 220px;">
+                                        <img src="./assets/images/applewatch/apple-watch-7-stainlesssteel-gold-300x300.jpg"
+                                            class="card-img-top" alt="Galaxy Watch6, BT">
+                                    </div>
+                                    <div class="box_body">
+                                        <a href="" style="text-decoration: none;">
+                                            <h5 class="title" style="font-weight: 400;">Apple Watch Series 7 Stainless
+                                                Steel</h5>
+                                        </a>
+                                        <p class="rate">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i><span> (3.2)</span>
+                                        </p>
+                                        <p class="text" style="color: #1a1a1a;">
+                                            Unlock your day's full potential with Samsung Galaxy Watch6...
+                                        </p>
+                                        <h4 class="price">$ 239</h4>
+                                        <div style="display: flex; justify-content: space-between;align-items: center;">
+                                            <div class="">
+                                                <span>Qty</span>
+                                                <button onclick="" class="btn text-danger bg-light">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button>
+                                                <span id="dsdass" class="px-1 quantity">1</span>
+                                                <button onclick="" class="btn text-success bg-light">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </div>
+                                            <div class="">
+                                                <button class="btn_heart">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </button>
+                                                <button onclick="" class="btn_add_to_cart  text-primary bg-light">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="product_dsdass" class="" data-aos="fade-up"
+                                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <div rotbin="New" class="box_item">
+                                    <div class="img">
+                                        <img src="./assets/images/products/SM-R930NZK_ET-SFR93SB.webp"
+                                            class="card-img-top" alt="Galaxy Watch6, BT">
+                                    </div>
+                                    <div class="box_body">
+                                        <a href="" style="text-decoration: none;">
+                                            <h5 class="title" style="font-weight: 400;">Galaxy Watch6, BT</h5>
+                                        </a>
+                                        <p class="rate">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i><span> (3.2)</span>
+                                        </p>
+                                        <p class="text" style="color: #1a1a1a;">
+                                            Unlock your day's full potential with Samsung Galaxy Watch6...
+                                        </p>
+                                        <h4 class="price">$ 239</h4>
+                                        <div style="display: flex; justify-content: space-between;align-items: center;">
+                                            <div class="">
+                                                <span>Qty</span>
+                                                <button onclick="" class="btn text-danger bg-light">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button>
+                                                <span id="dsdass" class="px-1 quantity">1</span>
+                                                <button onclick="" class="btn text-success bg-light">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </div>
+                                            <div class="">
+                                                <button class="btn_heart">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </button>
+                                                <button onclick="" class="btn_add_to_cart  text-primary bg-light">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section_smart_watch section_slide bg-white">
+        <div class="container">
+            <div class="row" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000"
+                data-aos-easing="ease-in-out">
+                <div class="wrapp_smart_watch wrapp_slide" style=" position: relative;">
+                    <div class="border-b">
+                        <h2 class="fonts-r">Samsung Watch</h2>
+                        <div class="btn_smart_watchs btn_slides">
+                            <div class="btn_smart_watch btn_slide swiper-button-prev"></div>
+                            <div class="btn_smart_watch btn_slide swiper-button-next"></div>
+                        </div>
+                    </div>
+                    <div id="smart_watch" class="swiper smart_watch get_id_slide">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" id="" class="" data-aos="fade-up" data-aos-delay="50"
+                                data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <div rotbin="New" class="box_item">
+                                    <div class="img" style="margin: 10px auto 10px;width: 292px;">
+                                        <img src="./assets/images/products/SM-R930NZK_ET-SFR93SB.webp"
+                                            class="card-img-top" alt="Galaxy Watch6, BT">
+                                    </div>
+                                    <div class="box_body">
+                                        <a href="" style="text-decoration: none;">
+                                            <h5 class="title" style="font-weight: 400;">Galaxy Watch6, BT</h5>
+                                        </a>
+                                        <p class="rate">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i><span> (3.2)</span>
+                                        </p>
+                                        <p class="text" style="color: #1a1a1a;">
+                                            Unlock your day's full potential with Samsung Galaxy Watch6...
+                                        </p>
+                                        <h4 class="price">$ 239</h4>
+                                        <div style="display: flex; justify-content: space-between;align-items: center;">
+                                            <div class="">
+                                                <span>Qty</span>
+                                                <button onclick="" class="btn text-danger bg-light">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button>
+                                                <span id="dsdass" class="px-1 quantity">1</span>
+                                                <button onclick="" class="btn text-success bg-light">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </div>
+                                            <div class="">
+                                                <button class="btn_heart">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </button>
+                                                <button onclick="" class="btn_add_to_cart  text-primary bg-light">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="" class="" data-aos="fade-up" data-aos-delay="50"
+                                data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <div rotbin="New" class="box_item">
+                                    <div class="img" style="margin: 10px auto 10px;width: 220px;">
+                                        <img src="./assets/images/SamsungWatch/galaxy-fit2-300x300.jpg"
+                                            class="card-img-top" alt="Galaxy Watch6, BT">
+                                    </div>
+                                    <div class="box_body">
+                                        <a href="" style="text-decoration: none;">
+                                            <h5 class="title" style="font-weight: 400;">Galaxy Fit2</h5>
+                                        </a>
+                                        <p class="rate">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i><span> (3.2)</span>
+                                        </p>
+                                        <p class="text" style="color: #1a1a1a;">
+                                            Unlock your day's full potential with Samsung Galaxy Watch6...
+                                        </p>
+                                        <h4 class="price">$ 239</h4>
+                                        <div style="display: flex; justify-content: space-between;align-items: center;">
+                                            <div class="">
+                                                <span>Qty</span>
+                                                <button onclick="" class="btn text-danger bg-light">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button>
+                                                <span id="dsdass" class="px-1 quantity">1</span>
+                                                <button onclick="" class="btn text-success bg-light">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </div>
+                                            <div class="">
+                                                <button class="btn_heart">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </button>
+                                                <button onclick="" class="btn_add_to_cart  text-primary bg-light">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="" class="" data-aos="fade-up" data-aos-delay="50"
+                                data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <div rotbin="New" class="box_item">
+                                    <div class="img" style="margin: 10px auto 10px;width: 220px;">
+                                        <img src="./assets/images/SamsungWatch/galaxy_watch5_sapphire-300x300.jpg"
+                                            class="card-img-top" alt="Galaxy Watch6, BT">
+                                    </div>
+                                    <div class="box_body">
+                                        <a href="" style="text-decoration: none;">
+                                            <h5 class="title" style="font-weight: 400;">Galaxy Watch5 44mm</h5>
+                                        </a>
+                                        <p class="rate">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i><span> (3.2)</span>
+                                        </p>
+                                        <p class="text" style="color: #1a1a1a;">
+                                            Unlock your day's full potential with Samsung Galaxy Watch6...
+                                        </p>
+                                        <h4 class="price">$ 239</h4>
+                                        <div style="display: flex; justify-content: space-between;align-items: center;">
+                                            <div class="">
+                                                <span>Qty</span>
+                                                <button onclick="" class="btn text-danger bg-light">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button>
+                                                <span id="dsdass" class="px-1 quantity">1</span>
+                                                <button onclick="" class="btn text-success bg-light">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </div>
+                                            <div class="">
+                                                <button class="btn_heart">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </button>
+                                                <button onclick="" class="btn_add_to_cart  text-primary bg-light">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="product_dsdass" class="" data-aos="fade-up"
+                                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <div rotbin="New" class="box_item">
+                                    <div class="img" style="margin: 10px auto 10px;width: 220px;">
+                                        <img src="./assets/images/SamsungWatch/galaxywatch4_green-44-300x300.jpg"
+                                            class="card-img-top" alt="Galaxy Watch6, BT">
+                                    </div>
+                                    <div class="box_body">
+                                        <a href="" style="text-decoration: none;">
+                                            <h5 class="title" style="font-weight: 400;">Galaxy Watch4 44mm</h5>
+                                        </a>
+                                        <p class="rate">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i><span> (3.2)</span>
+                                        </p>
+                                        <p class="text" style="color: #1a1a1a;">
+                                            Unlock your day's full potential with Samsung Galaxy Watch6...
+                                        </p>
+                                        <h4 class="price">$ 239</h4>
+                                        <div style="display: flex; justify-content: space-between;align-items: center;">
+                                            <div class="">
+                                                <span>Qty</span>
+                                                <button onclick="" class="btn text-danger bg-light">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button>
+                                                <span id="dsdass" class="px-1 quantity">1</span>
+                                                <button onclick="" class="btn text-success bg-light">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </div>
+                                            <div class="">
+                                                <button class="btn_heart">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </button>
+                                                <button onclick="" class="btn_add_to_cart  text-primary bg-light">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide" id="product_dsdass" class="" data-aos="fade-up"
+                                data-aos-delay="50" data-aos-duration="1000" data-aos-easing="ease-in-out">
+                                <div rotbin="New" class="box_item">
+                                    <div class="img" style="margin: 10px auto 10px;width: 220px;">
+                                        <img src="./assets/images/SamsungWatch/Galaxy-Watch3-41-2-300x300.jpg"
+                                            class="card-img-top" alt="Galaxy Watch6, BT">
+                                    </div>
+                                    <div class="box_body">
+                                        <a href="" style="text-decoration: none;">
+                                            <h5 class="title" style="font-weight: 400;">Galaxy Watch4 44mm</h5>
+                                        </a>
+                                        <p class="rate">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star-half-stroke"></i><span> (3.2)</span>
+                                        </p>
+                                        <p class="text" style="color: #1a1a1a;">
+                                            Unlock your day's full potential with Samsung Galaxy Watch6...
+                                        </p>
+                                        <h4 class="price">$ 239</h4>
+                                        <div style="display: flex; justify-content: space-between;align-items: center;">
+                                            <div class="">
+                                                <span>Qty</span>
+                                                <button onclick="" class="btn text-danger bg-light">
+                                                    <i class="fa-solid fa-minus"></i>
+                                                </button>
+                                                <span id="dsdass" class="px-1 quantity">1</span>
+                                                <button onclick="" class="btn text-success bg-light">
+                                                    <i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </div>
+                                            <div class="">
+                                                <button class="btn_heart">
+                                                    <i class="fa-solid fa-heart"></i>
+                                                </button>
+                                                <button onclick="" class="btn_add_to_cart  text-primary bg-light">
+                                                    <i class="fa-solid fa-cart-shopping"></i>
+                                                </button>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer" style="background: linear-gradient(90deg, rgba(58, 23, 142, 0.75), rgba(30, 1, 33, 0.9)),
+        url(./assets/images/slide1.jpg) right center / cover no-repeat;">
+        <div class="go_to_top">
+            <a target="_top" href="#top"><i class="fa-solid fa-circle-arrow-up"></i></a>
+        </div>
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                    <img src="./assets/images/logo.svg" alt="" width="130px">
+                    <p>"At Smart Shop, we’re passionate about timekeeping and style. Our mission is to bring you a
+                        diverse collection of high-quality watches, from elegant analog designs to cutting-edge
+                        smartwatches.</p>
+                    <a href="./about.html" class="btn_see_more">About U <i class="icon fa-solid fa-arrow-right-long"></i></a>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                    <h4 class="fonts-r">Products</h4>
+                    <ul class="footer_menu">
+                        <li class="nav_item">
+                            <a class="item_link" href="./smart-watch.html">
+                                Smartwatch
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a class="item_link" href="./digital-watch.html">
+                                Digital Watch
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="item_link" href="./analog-watch.html">
+                                Analog Watch
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="item_link" href="./tactile-watches.html">
+                                Tactile Watch
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="item_link" href="./all-models.html">
+                                All Models
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                    <h4 class="fonts-r">Help</h4>
+                    <ul class="footer_menu">
+                        <li class="nav_item">
+                            <a class="item_link" href="./WatchCareTips.html">
+                                Watch Care Tips
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a class="item_link" href="#">
+                                How to Choose the Perfect Watch
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="item_link" href="#">
+                                Latest Trends in Watches
+                            </a>
+                        </li>
+                    </ul>
+                    <p style="margin-top: 12px;">
+                        Operating hours: 24 h per day
+                    </p>
+                    <div style="margin-top: 12px;">
+                        <p class="text-white" style="font-size: 12px;
+                font-weight: 300;
+                margin-bottom: 5px;">Soport with this payment</p>
+                        <img src="./assets/images/payment_methods.png" alt="" width="300px">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                    <h4 class="fonts-r">Contact Us</h4>
+                    <p class="d_max_lg_none phone_number mb-0">
+                        <a title="Contact Us" href="tel:0889820067"><i class="fa-solid fa-phone-volume fa-shake"></i>
+                            0889820067</a><br>
+                        <a title="Email Us" href="mailto:info@smartshop.com">
+                            <i class=" fa-solid fa-envelope fa-shake"></i> info@smartshop.com
+                        </a>
+
+                    </p>
+                    <address>
+                        <a href="https://maps.app.goo.gl/zF2QPT5QLvYqNRK28" target="_blank">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <span>Smart Shop</span>Kork Kandal Village, Lvakrang <br>Commune, Varin District, Siem Reap
+                            Province
+                        </a>
+                    </address>
+                    <ul class="header_social_media mt-2">
+                        <li>
+                            <a title="Twitter" href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a title="Twitter" href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a title="Telegram" href=""><i class="fa-brands fa-telegram"></i></a>
+                        </li>
+                        <li>
+                            <a title="Facebook" href=""><i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="copyright_payment">
+                        <div class="text-center">
+                            <p class="text-white" style="font-size: 14px;
+                            font-weight: 300;
+                            margin-bottom: 5px;">Copyright &copy; 2025 Smart Shop. All Rights Reserved. by Mr. TIT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./assets/aos-master/dist/aos.js"></script>
+    <script src="./assets/js/data.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/producs.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".banner_slider", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            loop: true,
+            spaceBetween: 0,
+            centeredSlides: true,
+            autoplay: {
+                delay: 9000,
+                disableOnInteraction: false
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            effect: 'fade',
+            hashNavigation: {
+                watchState: true,
+            },
+        });
+        // ===============
+        var swiper = new Swiper(".smart_watch", {
+            spaceBetween: 10,
+            freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            // autoplay: {
+            //     delay: 2500,
+            //     disableOnInteraction: false
+            // },
+
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                // when window width is >= 480px
+                575.98: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                // when window width is >= 640px
+                767.98: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                780: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+                991.98: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+                1199.98: {
+                    slidesPerView: 4,
+                    spaceBetween: 15
+                }
+
+            }
+        });
+    </script>
+</body>
+
+</html>

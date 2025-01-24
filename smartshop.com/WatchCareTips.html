@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart shop</title>
+    <link rel="shortcut icon" href="./assets/images/favicon1.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/aos-master/dist/aos.css">
+</head>
+
+<body>
+    <header class="header_scroll">
+        <nav>
+            <div class="logo d_min_lg_none">
+                <a title="Smart shop" href="./index.html">
+                    <img src="./assets/images/logo.svg" alt="logo" width="80" height="60">
+                </a>
+            </div>
+            <div class="wrapp_main_menu">
+                <div class="bg bdb px_max_lg_3 d_block_max_lg d_none">
+                    <div class="logo_and_btn_close">
+                        <a href="">
+                            <img src="./assets/images/logo.svg" alt="logo" width="80" height="60">
+                        </a>
+                        <button class="close_menu_toggle"><i class="fa-solid fa-xmark"></i></button>
+                    </div>
+                </div>
+                <div class="wrapp_form_search">
+                    <div class="con_search">
+                        <p class="d_max_lg_none call_phone">
+                            <a title="Contact Us" href="tel:0889820067"><i
+                                    class="fa-solid fa-phone-volume fa-shake"></i> 0889820067</a>
+                        </p>
+
+                        <form class="form_search">
+                            <input class="input" placeholder="Type your text" required="" type="text">
+                            <button class="reset" type="reset">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12">
+                                    </path>
+                                </svg>
+                            </button>
+                            <button>
+                                <svg width="17" height="16" fill="none" xmlns="http://www.w3.org/2000/svg" role="img"
+                                    aria-labelledby="search">
+                                    <path
+                                        d="M7.667 12.667A5.333 5.333 0 107.667 2a5.333 5.333 0 000 10.667zM14.334 14l-2.9-2.9"
+                                        stroke="currentColor" stroke-width="1.333" stroke-linecap="round"
+                                        stroke-linejoin="round"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="main_menu bg_max_lg">
+                    <div class="logo d_max_lg_none">
+                        <a title="Smart shop" href="./index.html">
+                            <img src="./assets/images/logo.svg" alt="logo" width="80" height="60">
+                        </a>
+                    </div>
+                    <ul class="navigator mt_max_lg_2">
+
+                        <li class="nav_item">
+                            <a class="item_link" href="./index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="item_link" href="./about.html">About us</a>
+                        </li>
+                        <li class="nav_item li_has_sub">
+                            <a class="item_link has_sub" href="#">
+                                Products
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul>
+                                <li class="nav_item">
+                                    <a class="item_link" href="./smart-watch.html">Smart Watch</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a class="item_link" href="./digital-watch.html">Digital Watch</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a class="item_link" href="./analog-watch.html">
+                                        Analog Watch
+                                    </a>
+                                </li>
+                                <li class="nav_item">
+                                    <a class="item_link" href="./tactile-watches.html">Tactile Watch </a>
+                                </li>
+                                <li class="nav_item">
+                                    <a class="item_link" href="./all-models.html">All Models</a>
+                                </li>
+                            </ul>
+
+                        </li>
+                        <li class="nav_item">
+                            <a class="item_link " href="./service.html">Service</a>
+                        </li>
+                        <li class="nav_item li_has_sub">
+                            <a class="item_link has_sub" href="#">
+                                Blog
+                                <i class="fa-solid fa-angle-down"></i>
+                            </a>
+                            <ul>
+                                <li class="nav_item">
+                                    <a class="item_link hasactive" href="./WatchCareTips.html">Watch Care Tips</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a class="item_link" href="#">How to Choose the Perfect Watch</a>
+                                </li>
+                                <li class="nav_item">
+                                    <a class="item_link" href="#">Latest Trends in Watches</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav_item">
+                            <a class="item_link" href="./contact-us.html">Contact Us</a>
+                        </li>
+                    </ul>
+
+                    <div class="cart">
+                        <button type="button" id="cartamount" class="btn_cart cart_counter" number="0">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                        <h5 class="follow_us d_block_max_lg d_none">Follow Us</h5>
+                        <ul class="header_social_media">
+                            <li>
+                                <a title="Twitter" href="#"><i class="fa-brands fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a title="Telegram" href=""><i class="fa-brands fa-telegram"></i></a>
+                            </li>
+                            <li>
+                                <a title="Facebook" href=""><i class="fa-brands fa-facebook"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <button class="btn_toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+        <div class="modals_sidebar_cart" id="modals_sidebar_cart">
+            <div class="modals_sidebar_cart_header bg">
+                <h5 class="cart_header_title mb-0">Your Cart</h5>
+                <button type="button" class="btn_close_cart">
+                    <i class="fa-solid fa-times"></i>
+                </button>
+            </div>
+            <div class="modals_sidebar_cart_body">
+                <h4 id="label"></h4>
+                <div class="hoppingcart" id="hoppingcart">
+                </div>
+            </div>
+            <div class="modals_sidebar_cart_footer bg">
+                <div class="wrapp_footer">
+                    <div class="total_amount ">
+                        <h3 class="total_bill fonts-r">Total Bill</h3>
+                        <span id="total-price" class="total-price"></span>
+                    </div>
+                    <div>
+                        <button type="button" class="btn_checkout fonts-r">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="banner">
+        <div class="banner_multi" style="background:linear-gradient(90deg, rgba(58, 23, 142, 0.75), rgb(66 211 146 / 90%)), 
+        url(./assets/images/bg_service.webp) right center / cover no-repeat;">
+            <div class="slide-fwd-bl">
+                <img src="./assets/images/slide1.png" alt="" data-aos="fade-down" data-aos-delay="50"
+                    data-aos-duration="1000" data-aos-easing="ease-in-out" style="max-width: 250px;">
+            </div>
+            <h1>Watch Care Tips</h1>
+        </div>
+    </section>
+    <div class="bg_welcome_text_home">
+        <div class="container">
+            <div class="row mt-5 pt-5">
+                <div class="welcome_text_home">
+                    <p>
+                        Proper care is essential to keep your watch looking great and functioning perfectly. On our
+                        Watch Care Tips page, you’ll find expert advice on maintaining your timepiece, whether it’s a
+                        Smart Watch, Digital Watch, Analog Watch, or Tactile Watch. From cleaning and storage tips to
+                        handling water resistance and battery care, we cover everything you need to know to extend the
+                        life of your watch. Explore our tips to ensure your watch stays in excellent condition for years
+                        to come.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="bg-white why_choose_us">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-md-6 p-md-0 m-md-0 order-max-md-2">
+                        <div class="pl-md-3 pl-lg-4 " data-aos="fade-up" data-aos-delay="50" data-aos-duration="1000"
+                            data-aos-easing="ease-in-out">
+                            <h2 class="h2 fonts-r">Watch Repair Services</h2>
+                            <p>
+                                "We offer comprehensive repair services to keep your watch running smoothly. From simple
+                                fixes like battery replacements to intricate mechanical repairs, our skilled technicians
+                                handle all types of watches with precision and care." <br>
+                                Sub-Services Could Include:
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="icon fa-solid fa-check"></i>
+                                    Battery Replacement
+                                </li>
+                                <li>
+                                    <i class="icon fa-solid fa-check"></i>
+                                    Movement Repairs
+                                </li>
+                                <li>
+                                    <i class="icon fa-solid fa-check"></i>
+                                    Strap and Bracelet Adjustments
+                                </li>
+                                <li>
+                                    <i class="icon fa-solid fa-check"></i>
+                                    Dial and Crystal Replacement
+                                </li>
+                                <li>
+                                    <i class="icon fa-solid fa-check"></i>
+                                    Water Resistance Testing and Seals
+                                </li>
+                                <li>
+                                    <i class="icon fa-solid fa-check"></i>
+                                    Cleaning and Polishing
+                                </li>
+                                <li>
+                                    <i class="icon fa-solid fa-check"></i>
+                                    Full Service (Deep Cleaning, Lubrication, and Movement Testing)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6 p-md-0 m-md-0 order-max-md-1">
+                        <figure class="h-100">
+                            <img class="h-100" src="./assets/images/Watch-Repair-Services.webp"
+                                alt="Watch Repair Service Image">
+                        </figure>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 p-md-0 m-md-0">
+                        <figure class="h-100">
+                            <img class="h-100" src="./assets/images/WatchCustomization.webp"
+                                alt="Watch Repair Service Image">
+                        </figure>
+                    </div>
+                    <div class="col-md-6 p-md-0 m-md-0">
+                        <div class="plt-md-3 plt-lg-4 plt-xl-5" data-aos="fade-up" data-aos-delay="50"
+                            data-aos-duration="1000" data-aos-easing="ease-in-out">
+                            <h2 class="h2 fonts-r">Watch Repair Services</h2>
+                            <p>
+                                "We offer comprehensive repair services to keep your watch running smoothly. From simple
+                                fixes like battery replacements to intricate mechanical repairs, our skilled technicians
+                                handle all types of watches with precision and care." <br>
+                                Sub-Services Could Include:
+                            </p>
+                            <ul>
+                                <li>
+                                    <i class="icon fa-solid fa-check"></i>
+                                    Battery Replacement
+                                </li>
+                                <li>
+                                    <i class="icon fa-solid fa-check"></i>
+                                    Movement Repairs
+                                </li>
+                                <li>
+                                    <i class="icon fa-solid fa-check"></i>
+                                    Strap and Bracelet Adjustments
+                                </li>
+                                <li>
+                                    <i class="icon fa-solid fa-check"></i>
+                                    Dial and Crystal Replacement
+                                </li>
+                                <li>
+                                    <i class="icon fa-solid fa-check"></i>
+                                    Water Resistance Testing and Seals
+                                </li>
+                                <li>
+                                    <i class="icon fa-solid fa-check"></i>
+                                    Cleaning and Polishing
+                                </li>
+                                <li>
+                                    <i class="icon fa-solid fa-check"></i>
+                                    Full Service (Deep Cleaning, Lubrication, and Movement Testing)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="f">
+            <div class="row overflow-x-hidden">
+                <div class="col-md-6">
+                    <div class="f_item  f_item_left" style="background: linear-gradient(0deg, rgb(63 81 181 / 45%) 0%, rgb(231 234 255 / 7%) 100%), 
+                url(./assets/images/digital-watches.png) no-repeat;
+                background-position: center;
+                background-size: cover;
+                 ">
+                        <div data-aos="fade-right" data-aos-delay="50" data-aos-duration="1000"
+                            data-aos-easing="ease-in-out">
+                            <h2 class="h2 fonts-r">
+                                Customer Support
+                            </h2>
+                            <p>
+                                "Our friendly and knowledgeable support team is here to assist you with any questions or
+                                concerns. Whether it’s about a product, order inquiries, or assistance with your Smart
+                                Shop account, we are here to provide the help you need."
+                            </p>
+                            <!-- <a href="" class="btn_see_more">See more <i
+                                    class="icon fa-solid fa-arrow-right-long"></i></a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="f_item f_item_right" style="background: linear-gradient(0deg, #673ab71c 0%, rgb(0 150 136 / 36%)), 
+                url(./assets/images/analog-watch.png) no-repeat;
+                background-position: center;
+                background-size: cover;
+                 ">
+                        <div data-aos="fade-down-left" data-aos-delay="50" data-aos-duration="1000"
+                            data-aos-easing="ease-in-out">
+                            <h2 class="h2 fonts-r">
+                                Warranty & Repairs
+                            </h2>
+                            <p>
+                                "Enjoy peace of mind with our warranty services. If you’re experiencing any issues with
+                                your watch, our team will assess the problem and guide you through warranty claims,
+                                repairs, or exchanges based on the terms and conditions of the product warranty."
+                            </p>
+                            <!-- <a href="" class="btn_see_more">
+                                See more <i class="icon fa-solid fa-arrow-right-long"></i>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer" style="background: linear-gradient(90deg, rgba(58, 23, 142, 0.75), rgba(30, 1, 33, 0.9)),
+        url(./assets/images/slide1.jpg) right center / cover no-repeat;">
+        <div class="go_to_top">
+            <a target="_top" href="#top"><i class="fa-solid fa-circle-arrow-up"></i></a>
+        </div>
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                    <img src="./assets/images/logo.svg" alt="" width="130px">
+                    <p>"At Smart Shop, we’re passionate about timekeeping and style. Our mission is to bring you a
+                        diverse collection of high-quality watches, from elegant analog designs to cutting-edge
+                        smartwatches.</p>
+                    <a href="./about.html" class="btn_see_more">About U <i
+                            class="icon fa-solid fa-arrow-right-long"></i></a>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                    <h4 class="fonts-r">Products</h4>
+                    <ul class="footer_menu">
+                        <li class="nav_item">
+                            <a class="item_link" href="./smart-watch.html">
+                                Smartwatch
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a class="item_link" href="./digital-watch.html">
+                                Digital Watch
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="item_link" href="./analog-watch.html">
+                                Analog Watch
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="item_link" href="./tactile-watches.html">
+                                Tactile Watch
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="item_link" href="./all-models.html">
+                                All Models
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                    <h4 class="fonts-r">Help</h4>
+                    <ul class="footer_menu">
+                        <li class="nav_item">
+                            <a class="item_link" href="./WatchCareTips.html">
+                                Watch Care Tips
+                            </a>
+                        </li>
+
+                        <li class="nav_item">
+                            <a class="item_link" href="#">
+                                How to Choose the Perfect Watch
+                            </a>
+                        </li>
+                        <li class="nav_item">
+                            <a class="item_link" href="#">
+                                Latest Trends in Watches
+                            </a>
+                        </li>
+                    </ul>
+                    <p style="margin-top: 12px;">
+                        Operating hours: 24 h per day
+                    </p>
+                    <div style="margin-top: 12px;">
+                        <p class="text-white" style="font-size: 12px;
+                font-weight: 300;
+                margin-bottom: 5px;">Soport with this payment</p>
+                        <img src="./assets/images/payment_methods.png" alt="" width="300px">
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-3">
+                    <h4 class="fonts-r">Contact Us</h4>
+                    <p class="d_max_lg_none phone_number mb-0">
+                        <a title="Contact Us" href="tel:0889820067"><i class="fa-solid fa-phone-volume fa-shake"></i>
+                            0889820067</a><br>
+                        <a title="Email Us" href="mailto:info@smartshop.com">
+                            <i class=" fa-solid fa-envelope fa-shake"></i> info@smartshop.com
+                        </a>
+
+                    </p>
+                    <address>
+                        <a href="https://maps.app.goo.gl/zF2QPT5QLvYqNRK28" target="_blank">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <span>Smart Shop</span>Kork Kandal Village, Lvakrang <br>Commune, Varin District, Siem Reap
+                            Province
+                        </a>
+                    </address>
+                    <ul class="header_social_media mt-2">
+                        <li>
+                            <a title="Twitter" href="#"><i class="fa-brands fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a title="Twitter" href="#"><i class="fa-brands fa-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a title="Telegram" href=""><i class="fa-brands fa-telegram"></i></a>
+                        </li>
+                        <li>
+                            <a title="Facebook" href=""><i class="fa-brands fa-facebook"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="copyright_payment">
+                        <div class="text-center">
+                            <p class="text-white" style="font-size: 14px;
+                            font-weight: 300;
+                            margin-bottom: 5px;">Copyright &copy; 2025 Smart Shop. All Rights Reserved. by Mr. TIT</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./assets/aos-master/dist/aos.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".banner_slider", {
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            loop: true,
+            spaceBetween: 0,
+            centeredSlides: true,
+            autoplay: {
+                delay: 9000,
+                disableOnInteraction: false
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            effect: 'fade',
+            hashNavigation: {
+                watchState: true,
+            },
+        });
+        // ===============
+        var swiper = new Swiper(".smart_watch", {
+            slidesPerView: 4,
+            spaceBetween: 10,
+            freeMode: true,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                320: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                // when window width is >= 480px
+                575.98: {
+                    slidesPerView: 1,
+                    spaceBetween: 10
+                },
+                // when window width is >= 640px
+                767.98: {
+                    slidesPerView: 2,
+                    spaceBetween: 10
+                },
+                780: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+                991.98: {
+                    slidesPerView: 3,
+                    spaceBetween: 10
+                },
+                1199.98: {
+                    slidesPerView: 4,
+                    spaceBetween: 15
+                }
+
+            }
+        });
+    </script>
+</body>
+
+</html>

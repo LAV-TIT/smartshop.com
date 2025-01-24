@@ -1,0 +1,138 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-secondary: rgb(119, 46, 186);
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+    background-color: #3f51b5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    padding-left: 0;
+}
+
+header nav ul li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 20px 0px;
+    margin: 0px 12px;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+    position: relative;
+}
+
+header nav ul li a:hover {
+    color: rgb(45, 185, 255);
+}
+
+header nav ul li a::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    bottom: 0%;
+    height: 2px;
+    width: 100%;
+    background-color: rgb(45, 185, 255);
+    transform-origin: right top;
+    transform: scaleX(0%);
+    transition: transform 0.4s ease;
+}
+
+header nav ul li a:hover::before {
+    width: 100%;
+    transform: scaleX(100%);
+    transform-origin: left top;
+}
+
+.maim_menu {
+    flex: 0 1 100%;
+}
+
+.menu_toggle {
+    display: none;
+}
+
+@media (max-width: 998px) {
+    header nav .maim_menu {
+        position: fixed;
+        top: 54px;
+        left: 0;
+        width: 100%;
+        min-width: 300px;
+        max-width: 300px;
+        height: 100%;
+        transform: translateX(-400px);
+        transition: transform .3s ease-in-out;
+    }
+
+    header nav.active .maim_menu {
+        border-top: 1px solid #6b7aca;
+        background-color: #3f51b5;
+        transform: none;
+        padding: 20px;
+        opacity: 1;
+    }
+
+    /* header nav:not(.active) .maim_menu{
+        transition: transform .3s ease-in-out;
+        background-color: #3f51b5;
+    } */
+    header nav ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 0;
+    }
+
+    header nav ul li a {
+        display: block;
+        color: rgb(255, 255, 255);
+        padding: 8px 10px 8px;
+        margin: 1px 0px;
+        border-radius: 3px;
+        transition: all 0.2s ease;
+    }
+
+    header nav ul li a:hover {
+        padding: 8px 12px 8px;
+        background-color: #4b5ec5;
+    }
+
+    header nav ul li a::before {
+        display: none;
+    }
+
+    .container {
+        max-width: 960px;
+    }
+
+    .menu_toggle {
+        display: block;
+    }
+}
+
+img {
+    max-width: 100%;
+}

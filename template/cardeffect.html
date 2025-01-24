@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+    *,
+    *::after,
+    *::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    :root {
+        --rotateX: 0deg;
+        --rotateY: 0deg;
+        --width: min(360px, 90vw);
+    }
+
+    body {
+        display: grid;
+        place-content: center;
+        min-block-size: 100vh;
+        perspective: 800px;
+
+        padding: 2em;
+        background: linear-gradient(45deg,
+                hsl(198deg 12% 92% / 90%) 0% 35%,
+                hsl(182deg 13% 41% / 60%) 0% 65%,
+                hsl(198deg 12% 92% / 90%) 0% 65%);
+        overflow: hidden;
+    }
+
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        inline-size: var(--width);
+        aspect-ratio: 1.67 / 1;
+        background: linear-gradient(52deg,
+                hsla(196, 13%, 33%, 0.5),
+                hsl(206, 23%, 73%, 0.15),
+                80%,
+                hsl(193, 18%, 90%, 0.3)),
+            linear-gradient(45deg,
+                hsl(198, 8%, 33%, 0.3),
+                hsl(189, 13%, 80%, 0.4) 70%);
+
+        border-radius: 1rem;
+        border: thin solid #fff8;
+        box-shadow: inset 0 0 2em -0.36em #cdddea, 0 0.375rem 0.75rem #0002;
+        backdrop-filter: blur(0.625em) saturate(160%);
+
+        transform: rotateX(var(--rotateX)) rotateY(var(--rotateY));
+        transition: transform 150ms ease-out;
+        will-change: transform;
+    }
+
+    .card::before {
+        content: "TOUCH ME";
+        font: 600 3.6rem/1 "Roboto", sans-serif;
+        letter-spacing: 0.017em;
+        color: #fff9;
+        -webkit-text-stroke: 2px hsl(198 92% 42% / 90%);
+        text-shadow: -3px 4px 0px #fff9;
+        filter: drop-shadow(-4px 4px 3px #0003);
+    }
+
+    .bg {
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        inline-size: var(--width);
+        aspect-ratio: 1.67 / 1;
+        z-index: -99;
+    }
+
+    .deco {
+        position: relative;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        z-index: -10;
+        box-shadow: 0 4px 10px #0004;
+    }
+
+    .a {
+        background: linear-gradient(45deg, #0a85c2, #81dbf3);
+        width: 10rem;
+        top: 20%;
+        left: -10%;
+    }
+
+    .b {
+        background: linear-gradient(45deg, #ff5500, #f3cd81);
+        width: 10rem;
+        top: -40%;
+        left: 70%;
+    }
+
+    .c {
+        background: linear-gradient(45deg, #ae28f0, #f381f3);
+        width: 8rem;
+        top: -30%;
+        left: 15%;
+    }
+</style>
+
+<body>
+
+    <div class="card"></div>
+    <div class="bg">
+        <div class="deco a"></div>
+        <div class="deco b"></div>
+        <div class="deco c"></div>
+    </div>
+    <script>
+        const TiltCard = {
+            cardElement: document.querySelector(".card"),
+            animationFrameId: null,
+            currentRotateX: 0,
+            currentRotateY: 0,
+            targetRotateX: 0,
+            targetRotateY: 0,
+            initialRotateX: 0,
+            initialRotateY: 0,
+
+            updateCardRotation() {
+                this.cardElement.style.setProperty(
+                    "--rotateX",
+                    `${this.currentRotateX}deg`
+                );
+                this.cardElement.style.setProperty(
+                    "--rotateY",
+                    `${this.currentRotateY}deg`
+                );
+            },
+
+            smoothRotate() {
+                this.currentRotateX += (this.targetRotateX - this.currentRotateX) * 0.1;
+                this.currentRotateY += (this.targetRotateY - this.currentRotateY) * 0.1;
+                this.updateCardRotation();
+            },
+
+            startAnimation() {
+                this.smoothRotate();
+                this.animationFrameId = requestAnimationFrame(() =>
+                    this.startAnimation()
+                );
+            },
+
+            onCardMouseMove(event) {
+                const rect = this.cardElement.getBoundingClientRect();
+                const offsetX = event.clientX - rect.left;
+                const offsetY = event.clientY - rect.top;
+
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+
+                this.targetRotateX = ((centerY - offsetY) / centerY) * 10;
+                this.targetRotateY = ((offsetX - centerX) / centerX) * 10;
+
+                if (!this.animationFrameId) {
+                    this.startAnimation();
+                }
+            },
+
+            onCardMouseLeave() {
+                this.targetRotateX = this.initialRotateX;
+                this.targetRotateY = this.initialRotateY;
+
+                const resetRotationAnimation = () => {
+                    this.currentRotateX +=
+                        (this.targetRotateX - this.currentRotateX) * 0.1;
+                    this.currentRotateY +=
+                        (this.targetRotateY - this.currentRotateY) * 0.1;
+                    this.updateCardRotation();
+
+                    if (
+                        Math.abs(this.currentRotateX - this.targetRotateX) > 0.1 ||
+                        Math.abs(this.currentRotateY - this.targetRotateY) > 0.1
+                    ) {
+                        this.animationFrameId = requestAnimationFrame(
+                            resetRotationAnimation
+                        );
+                    } else {
+                        cancelAnimationFrame(this.animationFrameId);
+                        this.animationFrameId = null;
+                    }
+                };
+
+                resetRotationAnimation();
+            },
+
+            addCardEventListeners() {
+                this.cardElement.addEventListener("mousemove", (event) =>
+                    this.onCardMouseMove(event)
+                );
+                this.cardElement.addEventListener("mouseleave", () =>
+                    this.onCardMouseLeave()
+                );
+            },
+
+            initialize() {
+                this.initialRotateX = this.currentRotateX;
+                this.initialRotateY = this.currentRotateY;
+
+                this.addCardEventListeners();
+            }
+        };
+
+        TiltCard.initialize();
+
+    </script>
+</body>
+
+</html>

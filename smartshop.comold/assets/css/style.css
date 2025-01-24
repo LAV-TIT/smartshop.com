@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Redressed&display=swap');
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    --bs-body-color-rgb: 33, 37, 41;
+    font-family: "Kantumruy Pro", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+h1,
+.fonts-r {
+    font-family: "Redressed", cursive !important;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {}
+
+.card img {
+    width: 100%;
+    height: 30vh;
+    object-fit: contain;
+}
+
+nav.navbar,
+.bg {
+    background: linear-gradient(45deg, #0a2b4e, #835ec2);
+}
+
+nav.navbar .nav-item .nav-link {
+    color: #fff;
+}
+
+.navbar-brand,
+.card-empty {
+    background: -webkit-linear-gradient(315deg, #42d392 25%, #647eff);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 30px;
+    font-weight: 700;
+    animation: cl 10s linear infinite;
+    -webkit-animation: cl 1s linear infinite;
+}
+
+@keyframes cl {
+    0% {
+        background: -webkit-linear-gradient(315deg, #42d392 25%, #5a75ff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    100% {
+        background: -webkit-linear-gradient(315deg, #42d392 25%, #ff48f0);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.card-body button {
+    color: #fff;
+    border: 1px solid gainsboro;
+    border-radius: 4px;
+}
+
+.item .card {
+    box-shadow: 0 0.5rem 1rem rgb(186 186 186 / 15%)
+}
+
+.item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.desc {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 50px;
+}
+
+.offcanvas-body::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+.offcanvas-body::-webkit-scrollbar-track {
+
+    background-color: #0a2b4e;
+}
+
+/* Handle */
+.offcanvas-body::-webkit-scrollbar-thumb {
+    background: #42d392;
+}
+
+.menu_header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+    transition: all 1s ease-in-out
+}
+
+.menu_header.isactive_scroll {
+    top: -100px;
+}
+
+.header_social_media {
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 0;
+    padding-left: 0;
+    gap: 10px;
+}
+
+.header_social_media li {
+    background-color: #6852a8;
+    min-width: 25px;
+    padding: 5px;
+    min-height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    box-shadow: inset 4px 4px 6px -1px rgb(0 0 0 / 0%),
+        inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px -0.5px 0px rgba(255, 255, 255, 1),
+        0.5px 0.5px 0px rgb(0 0 0 / 0%), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+}
+
+.header_social_media li:hover a {
+    color: #42d392;
+}
+
+.header_social_media li:hover {
+    background-color: #fff;
+}
+
+.header_social_media li a {
+    color: #fff;
+    display: contents;
+    transition: color 0.2s ease-in-out;
+}

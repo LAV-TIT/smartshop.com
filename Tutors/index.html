@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="">
+                    <img src="./assets/images/logo.svg" alt="logo" width="80" height="50">
+                </a>
+            </div>
+            <div class="maim_menu">
+                <ul>
+                    <li>
+                        <a href="">Home</a>
+                    </li>
+                    <li>
+                        <a href="">Skills</a>
+                    </li>
+                    <li>
+                        <a href="">about</a>
+                    </li>
+                    <li>
+                        <a href="">Contact</a>
+                    </li>
+                </ul>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="">Home</a>
+                        </li>
+                        <li>
+                            <a href="">Skills</a>
+                        </li>
+                        <li>
+                            <a href="">about</a>
+                        </li>
+                        <li>
+                            <a href="">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu_toggle">
+                <button class="toggle">toggle</button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="banner">
+                <img src="./assets/images/article-details-large.jpg" alt="">
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <div class="row">
+                    <div class="col col-12">
+                        <div class="card">
+
+                        </div>
+                    </div>
+                    <div class="col col-12">
+                        <div class="card">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="assets/js/script.js"></script>
+    <script>
+        const toggle = document.querySelector('.toggle');
+        toggle.addEventListener('click', () => {
+            document.querySelector('nav').classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>
